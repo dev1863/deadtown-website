@@ -82,9 +82,12 @@
     <!-- Hero Section with Background Video -->
     <div class="hero_main">
         <div class="hero-video-bg">
-            <!-- ضع رابط يوتيوب خاص بكم (فيديو بدون موسيقى/توبرج) بدلاً من YOUTUBE_VIDEO_ID -->
+            <!-- فيديو خلفية: قيادة سيارة في سيرفر فايف إم (بدون موسيقى/محتوى غير لائق) -->
             <div class="video-fallback" style="background-image: url('assets/images/deadtown-images/bg-3.png');"></div>
-            <iframe class="video" src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID?autoplay=1&mute=1&loop=1&playlist=YOUTUBE_VIDEO_ID&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3" title="DeadTown" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <video class="video" autoplay muted loop playsinline preload="auto" poster="assets/images/deadtown-images/bg-3.png" aria-label="فيديو قيادة سيارة داخل سيرفر فايف إم">
+                <source src="assets/videos/hero-night-drive.mp4" type="video/mp4"/>
+                <source src="assets/videos/solvecity-teaser.mp4" type="video/mp4"/>
+            </video>
         </div>
         <div class="overlay">
             <div class="header-content">
