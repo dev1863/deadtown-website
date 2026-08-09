@@ -1,0 +1,18 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/submit-application"
+  to = "/.netlify/functions/submit-application"
+  status = 200
+
+[[redirects]]
+  from = "/rules"
+  to = "/rules.html"
+  status = 200
+
+[[redirects]]
+  from = "/job-application"
+  to = "/job-application.html"
+  status = 200
