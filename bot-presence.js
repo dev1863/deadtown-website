@@ -8,7 +8,7 @@ if (!token) {
     process.exit(1);
 }
 
-const ACTIVITY = { name: 'deadtown.netlify.app', type: 3 };
+const ACTIVITY = { name: 'DeadTown', type: 3 };
 
 let heartbeatTimer = null;
 let reconnectTimer = null;

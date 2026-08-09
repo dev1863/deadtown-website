@@ -63,6 +63,9 @@ async function sendDM(userId, data, dept) {
                     timestamp: new Date().toISOString()
                 }
             ],
+            components: [
+                { type: 1, components: [{ type: 2, style: 5, label: '🌐 موقع DeadTown', url: 'https://deadtown.netlify.app' }] }
+            ]
         };
         const sent = await discordFetch(`/channels/${dm.json.id}/messages`, { method: 'POST', body: JSON.stringify(msg) });
         return sent && sent.status === 200;

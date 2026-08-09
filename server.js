@@ -73,6 +73,9 @@ async function sendDM(userId, data, dept) {
                     footer: { text: 'DeadTown — نظام التقديم على الوظائف', icon_url: SITE_LOGO },
                     timestamp: new Date().toISOString()
                 }
+            ],
+            components: [
+                { type: 1, components: [{ type: 2, style: 5, label: '🌐 موقع DeadTown', url: 'https://deadtown.netlify.app' }] }
             ]
         };
         const sent = await discordFetch(`/channels/${dm.json.id}/messages`, { method: 'POST', body: JSON.stringify(msg) });
