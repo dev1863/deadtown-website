@@ -10,7 +10,7 @@ const path = require('path');
 
 // Discord Webhook for Job Applications
 const DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1535971055267614730/Up0h6nVc30fdqjbZAsKZvPtyAHOib2xDEJBvWO8ifoWpHlmcTYs4mQlBwm584FzlSgTJ';
-const SITE_BASE = 'https://deadtown-website.netlify.app';
+const SITE_BASE = 'https://deadtown.netlify.app';
 const SITE_LOGO = `${SITE_BASE}/assets/images/logo.png`;
 const DIVIDER = '━━━━━━━━━━━━━━━━━━━━━━━━━━';
 
