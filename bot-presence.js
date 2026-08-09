@@ -8,7 +8,8 @@ if (!token) {
     process.exit(1);
 }
 
-const ws = new WebSocket('wss://gateway.discord.gg/?v=10&encoding=json');
+const ACTIVITY = { name: 'deadtown.netlify.app', type: 3 };
+
 let heartbeatTimer = null;
 let reconnectTimer = null;
 
@@ -24,7 +25,7 @@ function connect() {
                 properties: { os: 'windows', browser: 'deadtown', device: 'deadtown' },
                 presence: {
                     since: Date.now(),
-                    activities: [{ name: 'DeadTown CFW | deadtown.netlify.app', type: 3 }],
+                    activities: [ACTIVITY],
                     status: 'online',
                     afk: false
                 }
@@ -43,7 +44,7 @@ function connect() {
             }, msg.d.heartbeat_interval);
         }
         if (msg.op === 0 && msg.t === 'READY') {
-            console.log(`[DeadTown Bot] Online as ${msg.d.user.username} | activity: Watching DeadTown CFW`);
+            console.log(`[DeadTown Bot] Online as ${msg.d.user.username} | activity: Watching ${ACTIVITY.name}`);
         }
         if (msg.op === 11) {
             console.log('[DeadTown Bot] Heartbeat acknowledged');

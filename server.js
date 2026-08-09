@@ -73,9 +73,6 @@ async function sendDM(userId, data, dept) {
                     footer: { text: 'DeadTown — نظام التقديم على الوظائف', icon_url: SITE_LOGO },
                     timestamp: new Date().toISOString()
                 }
-            ],
-            components: [
-                { type: 1, components: [{ type: 2, style: 5, label: 'deadtown.netlify.app', url: 'https://deadtown.netlify.app' }] }
             ]
         };
         const sent = await discordFetch(`/channels/${dm.json.id}/messages`, { method: 'POST', body: JSON.stringify(msg) });
@@ -139,15 +136,7 @@ function buildEmbeds(data) {
         timestamp: new Date().toISOString()
     };
 
-    const embed4 = {
-        title: '💜 شكراً لتقديمك مع DeadTown',
-        description: '> ⭐ مجتمعنا يرحب بك، ويتمنى لك رحلة ممتعة معنا\n> 🔗 انضم إلى ديسكورد السيرفر لمتابعة حالة طلبك',
-        color: 0x8900FF,
-        footer: { text: 'DeadTown — حيث يبدأ الطريق', icon_url: SITE_LOGO },
-        timestamp: new Date().toISOString()
-    };
-
-    return [embed1, embed2, embed3, embed4];
+    return [embed1, embed2, embed3];
 }
 
 const PORT = process.env.PORT || 3000;
