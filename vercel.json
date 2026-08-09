@@ -1,0 +1,6 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/submit-application", "destination": "/api/submit-application" }
+  ]
+}
