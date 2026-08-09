@@ -8,7 +8,12 @@ if (!token) {
     process.exit(1);
 }
 
-const ACTIVITY = { name: 'DeadTown', type: 3 };
+const ACTIVITY = {
+    name: 'DeadTown',
+    type: 3,
+    state: '🌐 الموقع: deadtown.netlify.app',
+    details: 'اضغط الزر أسفل الرسالة الخاصة للدخول إلى الموقع'
+};
 
 let heartbeatTimer = null;
 let reconnectTimer = null;
@@ -44,7 +49,7 @@ function connect() {
             }, msg.d.heartbeat_interval);
         }
         if (msg.op === 0 && msg.t === 'READY') {
-            console.log(`[DeadTown Bot] Online as ${msg.d.user.username} | activity: Watching ${ACTIVITY.name}`);
+            console.log(`[DeadTown Bot] Online as ${msg.d.user.username} | activity: Watching ${ACTIVITY.name} | ${ACTIVITY.state}`);
         }
         if (msg.op === 11) {
             console.log('[DeadTown Bot] Heartbeat acknowledged');
